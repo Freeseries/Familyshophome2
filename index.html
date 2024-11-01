@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Shop - صفحة الدخول</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body, html {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100%;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow: hidden;
+            position: relative;
+        }
+        .background-icons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .background-icons i {
+            position: absolute;
+            font-size: 24px;
+            color: rgba(255, 87, 34, 0.1);
+            animation: float 10s infinite linear;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100vh); }
+        }
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 2;
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .logo-icon {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            color: #ff5722;
+        }
+        .app-name {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #ff5722;
+            margin-bottom: 20px;
+        }
+        .loading-bar-container {
+            width: 80%;
+            background-color: #e0e0e0;
+            border-radius: 50px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .loading-bar {
+            width: 0;
+            height: 10px;
+            background-color: #ff5722;
+            animation: loading 10s linear forwards;
+        }
+        @keyframes loading {
+            to {
+                width: 100%;
+            }
+        }
+        .loading-message {
+            font-size: 1.2em;
+            color: #ff5722;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.1); }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const icons = ['fa-cart-shopping', 'fa-tag', 'fa-box', 'fa-gift', 'fa-credit-card', 'fa-truck'];
+            const iconContainer = document.querySelector('.background-icons');
+            for (let i = 0; i < 20; i++) {
+                const icon = document.createElement('i');
+                icon.className = `fas ${icons[Math.floor(Math.random() * icons.length)]}`;
+                icon.style.left = Math.random() * 100 + 'vw';
+                icon.style.top = Math.random() * 100 + 'vh';
+                icon.style.animationDelay = Math.random() * 10 + 's';
+                iconContainer.appendChild(icon);
+            }
+        });
+
+        setTimeout(function() {
+            window.location.href = "https://freeseries.github.io/Familyshophome1/";
+        }, 10000);
+    </script>
+</head>
+<body>
+    <div class="background-icons"></div>
+    <div class="container">
+        <img src="https://img.icons8.com/ios-filled/100/ff5722/shopping-cart.png" alt="Shopping Cart Icon" class="logo-icon">
+        <div class="app-name">Family Shop</div>
+        <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+        </div>
+        <div class="loading-message">Loading...</div>
+    </div>
+</body>
+</html>
