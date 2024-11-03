@@ -15,7 +15,7 @@
         body, html {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             height: 100%;
-            background-color: #000; /* لون الخلفية أصبح أسود */
+            background-color: #0088cc; /* لون الخلفية أصبح أزرق */
             color: #fff; /* لون النص أبيض ليتناسب مع الخلفية */
             overflow: hidden;
             position: relative;
@@ -32,7 +32,7 @@
         .background-icons i {
             position: absolute;
             font-size: 24px;
-            color: rgba(255, 87, 34, 0.1);
+            color: rgba(255, 255, 255, 0.1); /* لون الرموز بوضوح أقل */
             animation: float 10s infinite linear;
         }
         @keyframes float {
@@ -49,7 +49,7 @@
             text-align: center;
             z-index: 2;
             position: relative;
-            background-color: rgba(255, 255, 255, 0.1); /* خلفية شفافة قليلاً */
+            background-color: rgba(255, 255, 255, 0.2); /* خلفية شفافة أكثر */
             padding: 20px;
             border-radius: 10px;
         }
@@ -57,17 +57,17 @@
             width: 100px;
             height: 100px;
             margin-bottom: 20px;
-            color: #ff5722;
+            color: #fff; /* لون الشعار أصبح أبيض */
         }
         .app-name {
             font-size: 2.5em;
             font-weight: bold;
-            color: #ff5722;
+            color: #fff; /* لون الاسم أصبح أبيض */
             margin-bottom: 20px;
         }
         .loading-bar-container {
             width: 80%;
-            background-color: #444; /* شريط تحميل داكن */
+            background-color: #005e80; /* شريط تحميل بلون أزرق داكن */
             border-radius: 50px;
             overflow: hidden;
             margin-bottom: 20px;
@@ -75,7 +75,7 @@
         .loading-bar {
             width: 0;
             height: 10px;
-            background-color: #ff5722;
+            background-color: #fff; /* لون شريط التحميل أبيض */
             animation: loading 10s linear forwards;
         }
         @keyframes loading {
@@ -85,7 +85,7 @@
         }
         .loading-message {
             font-size: 1.2em;
-            color: #ff5722;
+            color: #fff; /* لون الرسالة أبيض */
             font-weight: bold;
             animation: pulse 1.5s infinite;
         }
